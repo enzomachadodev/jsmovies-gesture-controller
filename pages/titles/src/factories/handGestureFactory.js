@@ -11,13 +11,17 @@ import HandGestureView from "../views/HandGestureView.js";
 import Cam from "../../../../lib/shared/cam.js";
 import { fingerLookupIndexes, gestureStrings, knowGestures } from "../util/util.js";
 
+const styler = new PseudoStyler();
+
 const cam = await Cam.init();
+
 const handGestureFactory = {
 	async initalize() {
 		return HandGestureController.initialize({
 			cam,
 			view: new HandGestureView({
 				fingerLookupIndexes,
+				styler,
 			}),
 			service: new HandGestureService({
 				gestureStrings,

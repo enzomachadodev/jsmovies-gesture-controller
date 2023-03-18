@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+}
+
+.page-container {
+	width: 100%;
+	max-width: 800px;
+	height: 100%;
+	padding: 1rem;
+	margin: 0 auto;
+}
+
+.button-container {
+	background-color: black;
+}
+
+.button-container button {
+}
+
+.button-container output {
+}
+
+.video-container {
+	border: 1px solid red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
