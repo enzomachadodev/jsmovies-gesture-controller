@@ -4,9 +4,9 @@ const { shouldRun: scrollShouldRun } = prepareRunChecker({ timerDelay: 200 });
 const { shouldRun: clickShouldRun } = prepareRunChecker({ timerDelay: 500 });
 
 export default class HandGestureController {
+	#cam;
 	#view;
 	#service;
-	#cam;
 	#lastDirection = {
 		direction: "",
 		y: 0,
@@ -21,8 +21,10 @@ export default class HandGestureController {
 	async init() {
 		return this.#loop();
 	}
+
 	#scrollPage(direction) {
 		const pixelsPerScroll = 100;
+
 		if (this.#lastDirection.direction === direction) {
 			this.#lastDirection.y =
 				direction === "scroll-down"

@@ -15,6 +15,10 @@
 	--black: #111111;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html,
 body {
 	margin: 0;
@@ -1220,3 +1224,174 @@ a {
 	/* fica à frente dos elementos */
 	z-index: 2;
 }
+
+.box-toggle-gesture-btn {
+	position: fixed;
+	z-index: 20;
+	top: 100px;
+	right: 50px;
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: 0.2s;
+}
+
+.box-toggle-gesture-btn .power-btn-center{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	cursor: pointer;
+	background: #1b1b1b;
+	box-shadow: 0 13px 14px rgba(0,0,0,1), 
+		inset 0 -12px 13px rgba(0,0,0,1), 
+		inset 0 14px 14px rgba(255,255,255,0.5), 
+		0 0 0 2px #000000, 
+		0 0 0 5px #0c0c0c, 
+		0 0 0 5.5px #000000;
+}
+
+.box-toggle-gesture-btn i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: red;
+	font-size: 3rem;
+}
+
+
+.box-toggle-gesture-btn.active i {
+	color:  #9CFD56;
+	text-shadow: 0 0 5px  #9CFD56,
+				 0 0 10px  #9CFD56;
+   }
+
+
+
+
+.tutorial-modal-overlay {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.tutorial-modal-overlay.active {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tutorial-modal {
+	width: 100%;
+	max-width: 600px;
+	background-color: var(--grey);
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+.slideshow-container {
+	width: 100%;
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	background-color: var(--white);
+	height: 300px;
+	margin-bottom: 1rem;
+	border-radius: 10px;
+}
+
+.mySlides {
+	display: none;
+}
+
+.slide-btns {
+	width: 100%;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: var(--white);
+	border-radius: 10px;
+}
+
+.prev,
+.next {
+	cursor: pointer;
+	padding: 8px 16px;
+	color: orange;
+	font-weight: bold;
+	font-size: 18px;
+	border-radius: 8px;
+	background-color: var(--blue);
+}
+
+.prev:hover,
+.next:hover {
+	background-color: var(--blue-selected);
+}
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+/*
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+	background-color: #717171;
+}
+*/
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+} */

@@ -4,15 +4,14 @@ import "https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.min.j
 import "https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection@2.0.0/dist/hand-pose-detection.min.js";
 import "https://cdn.jsdelivr.net/npm/fingerpose@0.1.0/dist/fingerpose.min.js";
 
-import HandGestureController from "../controllers/HandGestureController.js";
+import HandGestureController from "../controllers/handGestureController.js";
 import HandGestureService from "../services/handGestureService.js";
-import HandGestureView from "../views/HandGestureView.js";
+import HandGestureView from "../views/handGestureView.js";
 
 import Cam from "../../../../lib/shared/cam.js";
 import { fingerLookupIndexes, gestureStrings, knowGestures } from "../util/util.js";
 
 const styler = new PseudoStyler();
-
 const cam = await Cam.init();
 
 const handGestureFactory = {
@@ -24,11 +23,11 @@ const handGestureFactory = {
 				styler,
 			}),
 			service: new HandGestureService({
-				gestureStrings,
-				knowGestures,
 				fingerpose: window.fp,
 				handPoseDetection: window.handPoseDetection,
 				handsVersion: window.VERSION,
+				gestureStrings,
+				knowGestures,
 			}),
 		});
 	},

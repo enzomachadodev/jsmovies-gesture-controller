@@ -6,33 +6,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./lib/index.css" />
 		<title>JSMovies - BlinkToPlay</title>
-		<style>
-			video {
-				width: 95%;
-				margin: 10px;
-			}
-
-			button {
-				margin: 10px;
-			}
-
-			.button-container {
-				margin-left: 20px;
-			}
-		</style>
 	</head>
-
 	<body>
 		<div class="page-container">
-			<div class="button-container">
+			<div class="btn-container">
+				<button onclick="window.location.replace('../titles')">Back to Home</button>
 				<button type="button" disabled id="init">Initialize Blink Recognition</button>
 				<output id="status"></output>
 			</div>
 			<div class="video-container">
 				<video id="video" src="/assets/video-jsmovies.mp4" controls></video>
 			</div>
+			<div class="tip-container">
+				<div class="tip-div"><img src="../../assets/icon-idea.png" alt="idea icon" /></div>
+				<h3>Blink to pause or play the video.</h3>
+			</div>
 		</div>
-
 		<script src="./src/index.js" type="module"></script>
 	</body>
 </html>

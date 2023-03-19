@@ -14,7 +14,7 @@ export default class Controller {
 
 	static async initialize(deps) {
 		const controller = new Controller(deps);
-		controller.log("not yet tdetectiong eye blink! click in the button to start");
+		controller.log("Not yet detecting eye blink! click in the button to start");
 		return controller.init();
 	}
 

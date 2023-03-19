@@ -1,36 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
+
+:root {
+	--blue: #3e48f2;
+	--blue-selected: rgba(30, 73, 210, 0.8);
+	--gray: rgba(104, 104, 104, 1);
+	--gray-selected: rgb(162, 159, 159);
+	--green: rgb(44, 212, 103);
+	--green-selected: rgba(30, 169, 79, 0.9);
+	--red: rgba(212, 44, 44, 1);
+	--red-selected: rgba(170, 35, 35, 0.9);
+	--card-scale: 5;
+	--white: rgba(230, 230, 230, 1);
+	--black: #111111;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
-	background-color: black;
+	width: 100%;
+	height: 100%;
+	background-color: var(--gray);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .page-container {
+	max-width: 1024px;
 	width: 100%;
-	max-width: 800px;
-	height: 100%;
 	padding: 1rem;
-	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.button-container {
-	background-color: black;
+.btn-container {
+	background-color: var(--white);
+	width: 100%;
+	padding: 1rem;
+	border-radius: 10px;
+	gap: 1rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
 }
 
-.button-container button {
+.btn-container button {
+	color: var(--white);
+	padding: 8px 16px;
+	border-radius: 8px;
+	background-color: var(--blue);
+	cursor: pointer;
 }
 
-.button-container output {
+.btn-container button:disabled {
+	opacity: 50%;
+}
+
+.btn-container button:active {
+	background-color: var(--blue-selected);
+}
+
+.btn-container output {
 }
 
 .video-container {
-	border: 1px solid red;
+	padding: 1rem;
+	border-radius: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: var(--white);
+	margin: 1rem 0rem;
+}
+
+.video-container video {
+	width: 100%;
+	border: 8px solid var(--blue);
+	border-radius: 8px;
+}
+
+.tip-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background-color: var(--white);
+	border-radius: 10px;
+}
+
+.tip-container h3 {
+}
+
+.tip-div {
+	background-color: var(--blue);
+	border-radius: 50px;
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+}
+
+.tip-div img {
+	width: 100%;
+	height: 100%;
 }
