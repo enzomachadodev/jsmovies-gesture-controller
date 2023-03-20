@@ -1,18 +1,16 @@
 const tutorialModal = document.querySelector(".tutorial-modal-overlay");
 
-tutorialModal.addEventListener("click", (e) => {
-	if (e.target.classList[0] === "tutorial-modal-overlay") {
-		tutorialModal.classList.toggle("active");
-	}
+const tipBtn = document.querySelector("#help-gesture-btn");
+tipBtn.addEventListener("click", () => {
+	tutorialModal.classList.toggle("active");
+});
+
+const closeTip = document.querySelector(".close-tutorial-modal");
+closeTip.addEventListener("click", () => {
+	tutorialModal.classList.toggle("active");
 });
 
 let slides = document.getElementsByClassName("mySlides");
-
-const powerBtn = document.querySelector("#power-btn-gesture");
-powerBtn.addEventListener("click", () => {
-	powerBtn.classList.toggle("active");
-	tutorialModal.classList.toggle("active");
-});
 
 let current = 0;
 let length = slides.length;
@@ -48,4 +46,9 @@ nextBtn.addEventListener("click", (e) => {
 
 prevBtn.addEventListener("click", (e) => {
 	plusSlides(-1);
+});
+
+const finalBtn = document.querySelector(".final-tutorial-btn");
+finalBtn.addEventListener("click", () => {
+	tutorialModal.classList.toggle("active");
 });

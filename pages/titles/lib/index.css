@@ -16,7 +16,12 @@
 }
 
 * {
+	margin: 0;
+	padding: 0;
+	border: 0;
 	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
 }
 
 html,
@@ -1225,7 +1230,7 @@ a {
 	z-index: 2;
 }
 
-.box-toggle-gesture-btn {
+.help-gesture-btn {
 	position: fixed;
 	z-index: 20;
 	top: 100px;
@@ -1235,43 +1240,18 @@ a {
 	cursor: pointer;
 	border-radius: 50%;
 	transition: 0.2s;
+	border: 5px solid white;
+	background-color: var(--blue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 2.5rem;
 }
 
-.box-toggle-gesture-btn .power-btn-center{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	cursor: pointer;
-	background: #1b1b1b;
-	box-shadow: 0 13px 14px rgba(0,0,0,1), 
-		inset 0 -12px 13px rgba(0,0,0,1), 
-		inset 0 14px 14px rgba(255,255,255,0.5), 
-		0 0 0 2px #000000, 
-		0 0 0 5px #0c0c0c, 
-		0 0 0 5.5px #000000;
+.help-gesture-btn:hover {
+	background-color: var(--blue-selected);
 }
-
-.box-toggle-gesture-btn i {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: red;
-	font-size: 3rem;
-}
-
-
-.box-toggle-gesture-btn.active i {
-	color:  #9CFD56;
-	text-shadow: 0 0 5px  #9CFD56,
-				 0 0 10px  #9CFD56;
-   }
-
-
-
 
 .tutorial-modal-overlay {
 	width: 100%;
@@ -1279,7 +1259,7 @@ a {
 	top: 0;
 	left: 0;
 	position: fixed;
-	z-index: 100;
+	z-index: 21;
 	background-color: rgba(0, 0, 0, 0.5);
 	display: none;
 	align-items: center;
@@ -1302,9 +1282,37 @@ a {
 .tutorial-modal {
 	width: 100%;
 	max-width: 600px;
-	background-color: var(--grey);
+	background-color: var(--white);
 	padding: 1rem;
 	border-radius: 10px;
+}
+
+.close-tutorial-modal-div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+.close-tutorial-modal-div h2 {
+	color: var(--blue);
+}
+
+.close-tutorial-modal {
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--blue);
+	padding: 5px 10px;
+	border: none;
+	border-radius: 8px;
+	color: var(--white);
+}
+
+.close-tutorial-modal:hover {
+	background-color: var(--blue-selected);
 }
 
 .slideshow-container {
@@ -1312,9 +1320,22 @@ a {
 	max-width: 1000px;
 	position: relative;
 	margin: auto;
-	background-color: var(--white);
-	height: 300px;
+	background-color: var(--grey);
 	margin-bottom: 1rem;
+	border-radius: 10px;
+	min-height: 391px;
+}
+
+.slider-info {
+	display: flex;
+	justify-content: center;
+	height: 300px;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.slider-info img {
+	height: 100%;
 	border-radius: 10px;
 }
 
@@ -1324,23 +1345,23 @@ a {
 
 .slide-btns {
 	width: 100%;
-	padding: 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	background-color: var(--white);
-	border-radius: 10px;
+	gap: 1rem;
 }
 
 .prev,
 .next {
 	cursor: pointer;
 	padding: 8px 16px;
-	color: orange;
+	color: white;
 	font-weight: bold;
 	font-size: 18px;
 	border-radius: 8px;
 	background-color: var(--blue);
+	width: 50%;
+	border: none;
 }
 
 .prev:hover,
@@ -1352,46 +1373,32 @@ a {
 	color: #f2f2f2;
 	font-size: 15px;
 	padding: 8px 12px;
-	position: absolute;
-	bottom: 8px;
 	width: 100%;
+	min-height: 60px;
+	display: flex;
 	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
 
 .numbertext {
 	color: #f2f2f2;
 	font-size: 12px;
 	padding: 8px 12px;
-	position: absolute;
 	top: 0;
 }
-/*
-.dot {
+
+.final-tutorial-btn {
+	margin: 1rem;
+	padding: 8px 32px;
+	border-radius: 8px;
+	background-color: var(--red);
+	color: white;
+	font-size: 1rem;
+	margin: 0 auto;
 	cursor: pointer;
-	height: 15px;
-	width: 15px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-	background-color: #717171;
+.final-tutorial-btn:hover {
+	background-color: var(--red-selected);
 }
-*/
-.fade {
-	animation-name: fade;
-	animation-duration: 1.5s;
-}
-
-@keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-	to {
-		opacity: 1;
-	}
-} */
