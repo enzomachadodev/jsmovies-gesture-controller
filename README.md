@@ -1,10 +1,10 @@
 <h1 align="center">
-     JSExpertMax Gesture Controller - Semana JS Expert 7.0
+     JSMovies Gesture Controller - Semana JS Expert 7.0
 </h1>
 
 <hr>
 
-<img width=100% src="">
+<img width=100% src="https://user-images.githubusercontent.com/106446549/226501148-fc1e1bd2-a230-4469-98a5-b5222bfbc036.gif">
 
 <hr>
 
@@ -12,7 +12,7 @@
 
 [Click here](https://m4chado.github.io/JS-Expert-Week/)
 
-Don't forget to allow camera.
+Click on the button on the left with a question mark to access the gesture tutorial.
 
 <hr>
 
@@ -39,13 +39,13 @@ HTML5, CSS3, JavaScript, TensorFlow.Js, Fingerpose.
 
 <hr>
 
-## Pre-reqs
-- This project is using Node.js v19.6
-
 ## 💾Running
 
+- This project is using Node.js v19.6
 - Run `npm ci` on the folder that contains `package.json` to restore packages.
 - Run `npm start` and next open the browser in [http://localhost:3000](http://localhost:3000) to see the page.
+
+<hr>
 
 ## 💻Usage
 
@@ -53,13 +53,15 @@ HTML5, CSS3, JavaScript, TensorFlow.Js, Fingerpose.
 2. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 3. Click on the button on the left with a question mark to access the gesture tutorial.
 
-<img width=100% src="">
+<img width=40% src="https://user-images.githubusercontent.com/106446549/226501171-814b6dbd-e086-408e-ab7c-8b6733cada85.png">
      
 4. Don't forget to allow camera.
 
+<img width=40% src="https://user-images.githubusercontent.com/106446549/226501185-6cdf557c-5c86-4b3b-bc62-4851b7ceccf6.jpg">
+
 <hr>
 
-### Crédits to Layout
+## Crédits to Layout
 - Interface based in the project [Streaming Service](https://codepen.io/Gunnarhawk/pen/vYJEwoM) from [gunnarhawk](https://github.com/Gunnarhawk)
 
 ## Made with 🤍 by:
