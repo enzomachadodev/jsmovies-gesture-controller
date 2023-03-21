@@ -5,8 +5,6 @@ import CardsService from "./../services/cardsService.js";
 
 const cardListWorker = new Worker(`./src/workers/cardListWorker.js`, { type: "module" });
 
-console.log(cardListWorker);
-
 const [rootPath] = window.location.href.split("/pages/");
 const factory = {
 	async initalize() {
