@@ -10,7 +10,7 @@
 
 ## 📎To access the project demo
 
-[Click here](https://m4chado.github.io/JS-Expert-Week/)
+[Click here](https://enzomachadodev.github.io/JS-Expert-Week/)
 
 Click on the button on the left with a question mark to access the gesture tutorial.
 
